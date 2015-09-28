@@ -1,0 +1,8 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<dd:process xmlns:dd="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:diag="http://multichoicebranching.com/MultiChoiceBranching" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:this="http://multichoicebranching.com/MultiChoiceBranching/MultuChoiceBranching" xmlns:Client="http://multichoicebranching.com/MultiChoiceBranching/Client" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="this:MultuChoiceBranching" fileName="MultiChoiceBranching-MultuChoiceBranching.bpel">
+  <dd:property name="PATH">MultiChoiceBranching</dd:property>
+  <dd:property name="SVG">MultiChoiceBranching.svg</dd:property>
+  <dd:provide partnerLink="multuChoiceBranchingAndClientPlkVar">
+    <dd:service name="this:CanonicServiceForClient" port="canonicPort"></dd:service>
+  </dd:provide>
+</dd:process>

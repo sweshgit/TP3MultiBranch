@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:diag="http://thisdiagram" xmlns:Client="http://thisdiagram/Client" xmlns:MultuChoiceBranching="http://thisdiagram/MultuChoiceBranching" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000089" bpdm:canid="_POAi8GVMEeWrz9H0l1ciVQ" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="MultuChoiceBranchingAndClient" bpdm:poolOneId="_QK96cGVMEeWrz9H0l1ciVQ" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="MultuChoiceBranching" bpdm:poolTwoId="_POXIQGVMEeWrz9H0l1ciVQ" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Client">
+    <pnlk:role name="MultuChoiceBranching_for_Client" portType="MultuChoiceBranching:ForClient" bpdm:thisPoolId="_QK96cGVMEeWrz9H0l1ciVQ">
+      <wsdl:portType name="ForClient">
+        <wsdl:operation name="Receive" bpdm:canid="_POYWYGVMEeWrz9H0l1ciVQ._SjdKQGWYEeWQSq2yN3_lxw._eAh8EGVMEeWrz9H0l1ciVQ.">
+          <wsdl:input message="MultuChoiceBranching:ReceiveRequest" name="Receive" bpdm:canid="_Q-leMGWYEeWQSq2yN3_lxw" bpdm:senderId="_POYWYGVMEeWrz9H0l1ciVQ" bpdm:receiverId="_eAh8EGVMEeWrz9H0l1ciVQ" bpdm:senderName="Send" bpdm:receiverName="Receive" bpdm:receiverPoolId="_QK96cGVMEeWrz9H0l1ciVQ" bpdm:dataobjectPointer="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}string" bpdm:bodyPartElemName="ReceiveRequest" bpdm:bodyPartElemType="{http://www.w3.org/2001/XMLSchema}string"></wsdl:input>
+          <wsdl:output message="MultuChoiceBranching:ReceiveResponse" name="ReceiveResponse" bpdm:canid="_Uxd58GWYEeWQSq2yN3_lxw" bpdm:senderId="_SjdKQGWYEeWQSq2yN3_lxw" bpdm:receiverId="_POYWYGVMEeWrz9H0l1ciVQ" bpdm:senderName="Reply" bpdm:receiverName="Send" bpdm:receiverPoolId="_POXIQGVMEeWrz9H0l1ciVQ" bpdm:bodyPartElemName="ReceiveResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

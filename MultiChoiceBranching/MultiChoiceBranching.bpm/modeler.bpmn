@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_POAi8WVMEeWrz9H0l1ciVQ" iD="_POAi8GVMEeWrz9H0l1ciVQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="_POXIQWVMEeWrz9H0l1ciVQ" iD="_POXIQGVMEeWrz9H0l1ciVQ" name="Client">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_csvY8GVMEeWrz9H0l1ciVQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_csvY8WVMEeWrz9H0l1ciVQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Q_7iAWWYEeWQSq2yN3_lxw" iD="_Q_7iAGWYEeWQSq2yN3_lxw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q_7iAmWYEeWQSq2yN3_lxw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q_7iA2WYEeWQSq2yN3_lxw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q_7iDGWYEeWQSq2yN3_lxw" key="defaultDeclarationName" value="multuChoiceBranchingReceiveRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q_7iEGWYEeWQSq2yN3_lxw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/MultuChoiceBranching}ReceiveRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Q_7iDWWYEeWQSq2yN3_lxw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q_7iDmWYEeWQSq2yN3_lxw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q_7iD2WYEeWQSq2yN3_lxw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Ux6l4WWYEeWQSq2yN3_lxw" iD="_Ux6l4GWYEeWQSq2yN3_lxw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ux6l4mWYEeWQSq2yN3_lxw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ux6l42WYEeWQSq2yN3_lxw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ux6l7GWYEeWQSq2yN3_lxw" key="defaultDeclarationName" value="multuChoiceBranchingReceiveResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ux6l8GWYEeWQSq2yN3_lxw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/MultuChoiceBranching}ReceiveResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Ux6l7WWYEeWQSq2yN3_lxw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ux6l7mWYEeWQSq2yN3_lxw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ux6l72WYEeWQSq2yN3_lxw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_POYWYWVMEeWrz9H0l1ciVQ" iD="_POYWYGVMEeWrz9H0l1ciVQ" associations="_Q_7iDWWYEeWQSq2yN3_lxw _Ux6l7WWYEeWQSq2yN3_lxw" name="Send" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_Q-leMWWYEeWQSq2yN3_lxw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_Uxd58WWYEeWQSq2yN3_lxw"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_QK96cWVMEeWrz9H0l1ciVQ" iD="_QK96cGVMEeWrz9H0l1ciVQ" name="MultuChoiceBranching">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_RAhX4WWYEeWQSq2yN3_lxw" iD="_RAhX4GWYEeWQSq2yN3_lxw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RAhX4mWYEeWQSq2yN3_lxw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RAhX42WYEeWQSq2yN3_lxw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RAhX7GWYEeWQSq2yN3_lxw" key="defaultDeclarationName" value="thisReceiveRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RArI4GWYEeWQSq2yN3_lxw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/MultuChoiceBranching}ReceiveRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_RAhX7WWYEeWQSq2yN3_lxw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RAhX7mWYEeWQSq2yN3_lxw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RAhX72WYEeWQSq2yN3_lxw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_Uxnq-mWYEeWQSq2yN3_lxw" iD="_Uxnq-WWYEeWQSq2yN3_lxw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Uxnq-2WYEeWQSq2yN3_lxw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Uxnq_GWYEeWQSq2yN3_lxw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UxnrBWWYEeWQSq2yN3_lxw" key="defaultDeclarationName" value="thisReceiveResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Uxw042WYEeWQSq2yN3_lxw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/MultuChoiceBranching}ReceiveResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_Uxw04GWYEeWQSq2yN3_lxw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Uxw04WWYEeWQSq2yN3_lxw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Uxw04mWYEeWQSq2yN3_lxw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_eAh8EWVMEeWrz9H0l1ciVQ" iD="_eAh8EGVMEeWrz9H0l1ciVQ" associations="_RAhX7WWYEeWQSq2yN3_lxw" outgoingEdges="_48H_0WVMEeWrz9H0l1ciVQ" name="Receive">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_Q-leMWWYEeWQSq2yN3_lxw"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_okitYWVMEeWrz9H0l1ciVQ" iD="_okitYGVMEeWrz9H0l1ciVQ" outgoingEdges="_QACAUGVNEeWrz9H0l1ciVQ" incomingEdges="_8zU64WVMEeWrz9H0l1ciVQ" name="Output_1" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_qo6_8WVMEeWrz9H0l1ciVQ" iD="_qo6_8GVMEeWrz9H0l1ciVQ" outgoingEdges="_kCRmoWVNEeWrz9H0l1ciVQ" incomingEdges="_9ZC3EWVMEeWrz9H0l1ciVQ" name="Output_2" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_vZZsYWVMEeWrz9H0l1ciVQ" iD="_vZZsYGVMEeWrz9H0l1ciVQ" outgoingEdges="_nohUkWVNEeWrz9H0l1ciVQ" incomingEdges="__wtSAWVMEeWrz9H0l1ciVQ" name="Default" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_48BSIWVMEeWrz9H0l1ciVQ" iD="_48BSIGVMEeWrz9H0l1ciVQ" outgoingEdges="_8zU64WVMEeWrz9H0l1ciVQ _9ZC3EWVMEeWrz9H0l1ciVQ __wtSAWVMEeWrz9H0l1ciVQ" incomingEdges="_48H_0WVMEeWrz9H0l1ciVQ" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_P_75sWVNEeWrz9H0l1ciVQ" iD="_P_75sGVNEeWrz9H0l1ciVQ" outgoingEdges="_SkDAIWWYEeWQSq2yN3_lxw" incomingEdges="_QACAUGVNEeWrz9H0l1ciVQ _kCRmoWVNEeWrz9H0l1ciVQ _nohUkWVNEeWrz9H0l1ciVQ" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_SjdKQWWYEeWQSq2yN3_lxw" iD="_SjdKQGWYEeWQSq2yN3_lxw" associations="_Uxw04GWYEeWQSq2yN3_lxw" incomingEdges="_SkDAIWWYEeWQSq2yN3_lxw" name="Reply" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_Uxd58WWYEeWQSq2yN3_lxw"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_48H_0WVMEeWrz9H0l1ciVQ" iD="_48H_0GVMEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_8zU64WVMEeWrz9H0l1ciVQ" iD="_8zU64GVMEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_9ZC3EWVMEeWrz9H0l1ciVQ" iD="_9ZC3EGVMEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="__wtSAWVMEeWrz9H0l1ciVQ" iD="__wtSAGVMEeWrz9H0l1ciVQ" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_QACAUGVNEeWrz9H0l1ciVQ" iD="_QABZQGVNEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_kCRmoWVNEeWrz9H0l1ciVQ" iD="_kCRmoGVNEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nohUkWVNEeWrz9H0l1ciVQ" iD="_nohUkGVNEeWrz9H0l1ciVQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SkDAIWWYEeWQSq2yN3_lxw" iD="_SkDAIGWYEeWQSq2yN3_lxw"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_Q-leMWWYEeWQSq2yN3_lxw" iD="_Q-leMGWYEeWQSq2yN3_lxw" source="_POYWYWVMEeWrz9H0l1ciVQ" target="_eAh8EWVMEeWrz9H0l1ciVQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CqW4sGWaEeWQSq2yN3_lxw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CqW4sWWaEeWQSq2yN3_lxw" key="douri" value="builtin:///xsd?xsdtype={http://www.w3.org/2001/XMLSchema}string"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CqW4smWaEeWQSq2yN3_lxw" key="douri2" value="project:///MultiChoiceXMLSchema.xsd?xsdelement={http://www.example.org/MultiChoiceXMLSchema}start"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_Uxd58WWYEeWQSq2yN3_lxw" iD="_Uxd58GWYEeWQSq2yN3_lxw" source="_SjdKQWWYEeWQSq2yN3_lxw" target="_POYWYWVMEeWrz9H0l1ciVQ"/>
+</bpmn:BpmnDiagram>

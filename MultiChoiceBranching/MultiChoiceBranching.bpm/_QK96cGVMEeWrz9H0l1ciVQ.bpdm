@@ -1,0 +1,137 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/MultuChoiceBranching" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:Client="http://thisdiagram/Client" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/MultuChoiceBranching">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/MultuChoiceBranching" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Client" bpdm:prefix="Client" bpdm:comment="contrib=&apos;partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForClient">
+                <wsdl:operation name="Receive" bpdm:source="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ">
+                    <wsdl:input message="this:ReceiveRequest" name="Receive"/>
+                    <wsdl:output message="this:ReceiveResponse" name="ReceiveResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <xs:element name="ReceiveRequest" type="xs:string" bpdm:source="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ"/>
+            <wsdl:message name="ReceiveRequest" bpdm:source="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ">
+                <wsdl:part name="body" element="this:ReceiveRequest"/>
+            </wsdl:message>
+            <xs:element name="ReceiveResponse" type="xs:string" bpdm:source="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ"/>
+            <wsdl:message name="ReceiveResponse" bpdm:source="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ">
+                <wsdl:part name="body" element="this:ReceiveResponse"/>
+            </wsdl:message>
+            <bpel:binding name="CanonicBindingForClient" type="this:ForClient" bpdm:isSynchronized="true"/>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_POXIQGVMEeWrz9H0l1ciVQ" bpdm:label="Client"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="MultuChoiceBranching" bpdm:ID="_QK96cGVMEeWrz9H0l1ciVQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="multuChoiceBranchingAndClientPlkVar" partnerLinkType="diag:MultuChoiceBranchingAndClient" myRole="MultuChoiceBranching_for_Client" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForClient" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/MultuChoiceBranching/Client" bpdm:providedIsDefault="true" bpdm:clientTasks="_QK96cGVMEeWrz9H0l1ciVQ:_eAh8EGVMEeWrz9H0l1ciVQ, _QK96cGVMEeWrz9H0l1ciVQ:_SjdKQGWYEeWQSq2yN3_lxw" bpdm:isManaged="true" bpdm:otherPoolId="_POXIQGVMEeWrz9H0l1ciVQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisReceiveRequestMsg" messageType="this:ReceiveRequest" bpdm:id="_RAhX4GWYEeWQSq2yN3_lxw" bpdm:messageIds="inc:_Q-leMGWYEeWQSq2yN3_lxw"/>
+            <bpel:variable name="thisReceiveResponseMsg" messageType="this:ReceiveResponse" bpdm:id="_Uxnq-WWYEeWQSq2yN3_lxw" bpdm:messageIds=" out:_Uxd58GWYEeWQSq2yN3_lxw">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:ReceiveResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Receive" partnerLink="multuChoiceBranchingAndClientPlkVar" portType="this:ForClient" isMyRole="true" enableSharing="false" bpdm:label="Receive" bpdm:ID="_eAh8EGVMEeWrz9H0l1ciVQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceiveRequestMsg" bpdm:msgVarScopeId="_QK96cGVMEeWrz9H0l1ciVQ" bpdm:variableIsManaged="true" bpdm:messageType="this:ReceiveRequest" bpdm:ID="_Q-leMGWYEeWQSq2yN3_lxw"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_48BSIGVMEeWrz9H0l1ciVQ" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_8zU64GVMEeWrz9H0l1ciVQ" bpdm:targetDisplayName="[GatewayDataBasedExclusive - Output_1]">
+                    <bpel:condition>$thisReceiveRequestMsg.body = 1
+<mapper:mapperLink>
+  <mapper:vertice id="503648884" targetPath="$condition" targetedBy="129766711-arg2"></mapper:vertice>
+  <mapper:vertice id="129766711" dimension="47x22" location="362,39">
+    <mapper:value>=</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1318868701" sourcePath="$thisReceiveRequestMsg.body" targetedBy="129766711-arg0"></mapper:vertice>
+  <mapper:vertice id="1916913618" dimension="49x33" location="216,100" targetedBy="129766711-arg1">
+    <mapper:value>1</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink></bpel:condition>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_9ZC3EGVMEeWrz9H0l1ciVQ" bpdm:targetDisplayName="[GatewayDataBasedExclusive - Output_2]">
+                    <bpel:condition>$thisReceiveRequestMsg.body = 2
+<mapper:mapperLink>
+  <mapper:vertice id="132828139" targetPath="$condition" targetedBy="369672938-arg2"></mapper:vertice>
+  <mapper:vertice id="369672938" dimension="43x23" location="426,50">
+    <mapper:value>=</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="840950527" sourcePath="$thisReceiveRequestMsg.body" targetedBy="369672938-arg0"></mapper:vertice>
+  <mapper:vertice id="1374716316" dimension="51x20" location="238,101" targetedBy="369672938-arg1">
+    <mapper:value>2</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink></bpel:condition>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="__wtSAGVMEeWrz9H0l1ciVQ" bpdm:targetDisplayName="default"></bpdm:linkset>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:label="Output_1" bpdm:ID="_okitYGVMEeWrz9H0l1ciVQ">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>"Sir, you have made the first choice."</bpel:from>
+                                <bpel:to>$thisReceiveRequestMsg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="328992886" targetPath="$thisReceiveRequestMsg.body" targetedBy="1965912963-arg0"></mapper:vertice>
+  <mapper:vertice id="1965912963" dimension="175x25" location="237,113">
+    <mapper:value>"Sir, you have made the first choice."</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:label="Output_2" bpdm:ID="_qo6_8GVMEeWrz9H0l1ciVQ">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>"Sir, you have made the second choice"</bpel:from>
+                                <bpel:to>$thisReceiveRequestMsg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1135064996" targetPath="$thisReceiveRequestMsg.body" targetedBy="1610965273-arg0"></mapper:vertice>
+  <mapper:vertice id="1610965273" dimension="175x25" location="300,72">
+    <mapper:value>"Sir, you have made the second choice"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:label="Default" bpdm:ID="_vZZsYGVMEeWrz9H0l1ciVQ">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>"Sorry, the choice made is not available."</bpel:from>
+                                <bpel:to>$thisReceiveRequestMsg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="883249059" targetPath="$thisReceiveRequestMsg.body" targetedBy="945908549-arg0"></mapper:vertice>
+  <mapper:vertice id="945908549" dimension="256x31" location="300,90">
+    <mapper:value>"Sorry, the choice made is not available."</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+            </bpdm:gateway>
+            <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_P_75sGVNEeWrz9H0l1ciVQ" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+            <bpdm:messagingtask operation="Receive" partnerLink="multuChoiceBranchingAndClientPlkVar" portType="this:ForClient" isMyRole="true" enableSharing="false" bpdm:label="Reply" bpdm:ID="_SjdKQGWYEeWQSq2yN3_lxw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisReceiveRequestMsg.body</bpel:from>
+                        <bpel:to>$thisReceiveResponseMsg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1225825470" targetPath="$thisReceiveResponseMsg.body" targetedBy="421995506-arg0"></mapper:vertice>
+  <mapper:vertice id="421995506" sourcePath="$thisReceiveRequestMsg.body"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceiveResponseMsg" bpdm:msgVarScopeId="_QK96cGVMEeWrz9H0l1ciVQ" bpdm:variableIsManaged="true" bpdm:messageType="this:ReceiveResponse" bpdm:ID="_Uxd58GWYEeWQSq2yN3_lxw"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
